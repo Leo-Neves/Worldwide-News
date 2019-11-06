@@ -85,7 +85,6 @@ class NewsActivity : AppCompatActivity() {
             super.onScrolled(recyclerView, dx, dy)
             val linearLayoutManager: LinearLayoutManager = news_list.layoutManager as LinearLayoutManager
             if (linearLayoutManager.findLastCompletelyVisibleItemPosition() == newsAdapter.itemCount-1){
-                    Log.i("NEWS", "Chegou no ultimo item")
                     newsViewModel.loadNews()
             }
         }
